@@ -16,11 +16,16 @@ public class App
 {
     public static void main( String[] args )
     {
-    	
+    	System.out.println("Start...");
+    	System.out.println("...Create EntityManagerFactory...");
     	EntityManagerFactory emf = Persistence.createEntityManagerFactory("myApp");
+    	System.out.println("...Creating Entity manager...");
     	EntityManager em = emf.createEntityManager();
+    	System.out.println("...Find Product \"Café\" id 3 ...");
     	Product pdct = em.find(Product.class, 1);
+    	System.out.println("...Printing product...");
     	System.out.println(pdct);
+    	System.out.println("...End");
     	
 //    	got: : 
 //    		Exception in thread "main" javax.persistence.PersistenceException: No Persistence provider for EntityManager named myApp

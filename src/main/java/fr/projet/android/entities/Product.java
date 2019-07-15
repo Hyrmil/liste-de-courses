@@ -38,7 +38,7 @@ public class Product {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idCategory", nullable = false, foreignKey = @ForeignKey(name = "idcategoryFK"))
+	@JoinColumn(name = "idCategory", nullable = false, foreignKey = @ForeignKey(name = "idcategoryFK")) // C'est pas les bonne colonnes
 	public Category getCatProduct() {
 		return catProduct;
 	}
