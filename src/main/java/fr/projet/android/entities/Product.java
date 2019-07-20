@@ -21,7 +21,7 @@ import javax.persistence.Table;
 @Table(name = "product")
 public class Product {
 
-	private Integer idproduct;
+	private Integer idProduct;
 	private String nameProduct;
 	private Category catProduct;
 
@@ -38,7 +38,7 @@ public class Product {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idCategory", nullable = false, foreignKey = @ForeignKey(name = "idcategoryFK")) // C'est pas les bonne colonnes
+	@JoinColumn(name = "id_category", nullable = false, foreignKey = @ForeignKey(name = "category_id_fk"))
 	public Category getCatProduct() {
 		return catProduct;
 	}
@@ -48,9 +48,9 @@ public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idproduct")
-	public Integer getIdproduct() {
-		return idproduct;
+	@Column(name = "id_product")
+	public Integer getIdPoduct() {
+		return idProduct;
 	}
 
 	// Constructor

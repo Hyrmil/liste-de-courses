@@ -24,21 +24,21 @@ import fr.projet.android.entities.Product;
 public abstract class Category {
 
 	private Integer idCategory;
-	private String nameCategoory;
+	private String nameCategory;
 	private ArrayList<Product> products = new ArrayList<Product>();
 	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idcategory")
+	@Column(name = "id_category")
 	public Integer getIdCategory() {
 		return idCategory;
 	}
 
 
 	@Column(name = "category_name")
-	public String getNameCategoory() {
-		return nameCategoory;
+	public String getNameCategory() {
+		return nameCategory;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "catProduct")
@@ -53,7 +53,7 @@ public abstract class Category {
 
 	@Override
 	public String toString() {
-		return nameCategoory + " : " + products;
+		return nameCategory + " : " + products;
 	}
 
 }

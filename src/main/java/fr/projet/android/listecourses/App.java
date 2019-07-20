@@ -27,13 +27,6 @@ public class App
     	System.out.println(pdct);
     	System.out.println("...End");
     	
-//    	got: : 
-//    		Exception in thread "main" javax.persistence.PersistenceException: No Persistence provider for EntityManager named myApp
-//    		at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:69)
-//    		at javax.persistence.Persistence.createEntityManagerFactory(Persistence.java:47)
-//    		at fr.projet.android.listecourses.App.main(App.java:20)
-//		Error (1 item)
-//    		The persistence.xml does not have recognized content.		persistence.xml		JPA Problem
     	
     }
 }
