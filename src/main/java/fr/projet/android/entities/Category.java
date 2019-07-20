@@ -28,6 +28,7 @@ public abstract class Category {
 	private ArrayList<Product> products = new ArrayList<Product>();
 	
 
+	// Getters and setters
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_category")
@@ -41,16 +42,28 @@ public abstract class Category {
 		return nameCategory;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "catProduct")
+	//@OneToMany(fetch = FetchType.LAZY, mappedBy = "catProduct")
 	public ArrayList<Product> getProducts() {
 		return products;
 	}
 
 
+	public void setIdCategory(Integer idCategory) {
+		this.idCategory = idCategory;
+	}
+
+
+	public void setNameCategory(String nameCategory) {
+		this.nameCategory = nameCategory;
+	}
+
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "catProduct")
 	public void setProducts(ArrayList<Product> products) {
 		this.products = products;
 	}
 
+	// ToString Override
 	@Override
 	public String toString() {
 		return nameCategory + " : " + products;

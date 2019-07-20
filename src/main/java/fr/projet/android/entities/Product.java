@@ -32,6 +32,7 @@ public class Product {
 		return nameProduct;
 	}
 
+
 	@Column(name = "product_name")
 	public void setNameProduct(String nameProduct) {
 		this.nameProduct = nameProduct;
@@ -49,10 +50,13 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_product")
-	public Integer getIdPoduct() {
+	public Integer getIdProduct() {
 		return idProduct;
 	}
 
+	public void setIdProduct(Integer idProduct) {
+		this.idProduct = idProduct;
+	}
 	// Constructor
 
 	public Product() {
