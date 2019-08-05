@@ -1,4 +1,4 @@
-rpackage fr.projet.android.entities;
+package fr.projet.android.entities;
 
 import java.io.Serializable;
 
